@@ -18,8 +18,8 @@ self.addEventListener('push',(e) => {
             }
         ]
     }
-    e.waitUntill(
-        self.registration.showNotification('New course has been added!!!', options)
-    )
+
+    self.registration.showNotification('New course has been added!!!', options)
+    
     
 })
