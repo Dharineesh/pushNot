@@ -18,8 +18,8 @@ self.addEventListener('push',(e) => {
             }
         ]
     };
-
-    self.registration.showNotification('New course has been added!!!', options);
-    
+    e.waitUntill(
+        self.registration.showNotification('New course has been added!!!', options)
+    );
     
 })
