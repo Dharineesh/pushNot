@@ -1,25 +1,25 @@
 
-self.addEventListener('push',(e) => {
-    var options = {
-        body : "this is generated from push",
-        vibrate : [100, 50, 100],
-        date : {
-            dateOfArrival : Date.now(),
-            primaryKey : "2"
-        },
-        actions : [
-            {
-                action : "explore",
-                title : "explore"
-            },
-            {
-                sction : "close",
-                title : "Closing!!!"
-            }
-        ]
-    }
+self.addEventListener('push',() => {
+    // var options = {
+    //     body : "this is generated from push",
+    //     vibrate : [100, 50, 100],
+    //     date : {
+    //         dateOfArrival : Date.now(),
+    //         primaryKey : "2"
+    //     },
+    //     actions : [
+    //         {
+    //             action : "explore",
+    //             title : "explore"
+    //         },
+    //         {
+    //             sction : "close",
+    //             title : "Closing!!!"
+    //         }
+    //     ]
+    // }
 
-    self.registration.showNotification('New course has been added!!!', options)
+    self.registration.sendNotification('New course has been added!!!', {});
     
     
 })
